@@ -1,0 +1,6 @@
+data/
+datasets/
+pretrained/
+outputs/
+
+__pycache__/
