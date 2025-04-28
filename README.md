@@ -32,7 +32,7 @@ pip install plyfile
 
 ## Running
 
-To train a gaussian splat, run the following:
+To train a gaussian splat, run the following from within the FLARE directory:
 ```sh
 torchrun --nproc_per_node=1 run_pose_pointcloud.py \
     --test_dataset "1 @ CustomDataset(split='train', ROOT='<path/to/input/images>', resolution=(<img_width>,<img_height>), seed=1, num_views=2, gt_num_image=0, aug_portrait_or_landscape=True, sequential_input=False, wpose=False)" \
