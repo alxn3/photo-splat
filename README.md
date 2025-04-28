@@ -34,10 +34,10 @@ pip install plyfile
 
 To train a gaussian splat, run the following:
 ```sh
-torchrun --nproc_per_node=1 FLARE/run_pose_pointcloud.py \
+torchrun --nproc_per_node=1 run_pose_pointcloud.py \
     --test_dataset "1 @ CustomDataset(split='train', ROOT='<path/to/input/images>', resolution=(<img_width>,<img_height>), seed=1, num_views=2, gt_num_image=0, aug_portrait_or_landscape=True, sequential_input=False, wpose=False)" \
     --model "AsymmetricMASt3R(pos_embed='RoPE100', patch_embed_cls='ManyAR_PatchEmbed', img_size=(512, 512), head_type='catmlp+dpt', output_mode='pts3d+desc24', depth_mode=('exp', -inf, inf), conf_mode=('exp', 1, inf), enc_embed_dim=1024, enc_depth=24, enc_num_heads=16, dec_embed_dim=768, dec_depth=12, dec_num_heads=12, two_confs=True, desc_conf_mode=('exp', 0, inf), wpose=False)" \
-    --pretrained ./pretrained/geometry_pose.pth \
-    --test_criterion "MeshOutput(sam=False)" --output_dir "log/" --amp 1 --seed 1 --num_workers 0
+    --pretrained ../pretrained/geometry_pose.pth \
+    --test_criterion "MeshOutput(sam=False)" --output_dir "../log/" --amp 1 --seed 1 --num_workers 0
 ```
 - `img_width` and `img_height` should match the aspect ratio of input images and be a multiple of `64`.
