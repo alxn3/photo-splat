@@ -26,6 +26,8 @@ cd -
 # Download model checkpoints
 wget -P pretrained https://huggingface.co/AntResearch/FLARE/resolve/main/geometry_pose.pth
 wget -P pretrained https://huggingface.co/zhang3z/FLARE_NVS/resolve/main/NVS.pth
+
+pip install plyfile
 ```
 
 ## Running
