@@ -6,3 +6,5 @@ log/
 nerfvis_scenes/
 
 __pycache__/
+build/
+*.so
